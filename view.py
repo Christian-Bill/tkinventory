@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
-from inventory_tab.form import Form
-from inventory_tab.storage_list import StorageList
+
+from view.inventory_tab.form import Form
+from view.inventory_tab.storage_list import StorageList
 
 
 class View(tk.Tk):
