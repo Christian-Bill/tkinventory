@@ -45,4 +45,4 @@ class View(tk.Tk):
 
 
 if __name__ == '__main__':
-    View().mainloop()
+    View().main()
