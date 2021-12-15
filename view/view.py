@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from inventory_tab.form import Form
+from inventory_tab.storage_list import StorageList
 
 
 class View(tk.Tk):
@@ -13,6 +14,7 @@ class View(tk.Tk):
         self._window_settings()
         self._app_notebook()
         self._create_form()
+        self._create_storage_list()
 
     def main(self):
         self.mainloop()
@@ -33,7 +35,12 @@ class View(tk.Tk):
         self.tab_menu.add(self.inventory_frame, text='Inventory')
 
     def _create_form(self):
-        Form(self.inventory_frame).main()
+        form = Form(self.inventory_frame)
+        form.main()
+
+    def _create_storage_list(self):
+        storage = StorageList(self.inventory_frame)
+        storage.main()
 
 
 if __name__ == '__main__':
